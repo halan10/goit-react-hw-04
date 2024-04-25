@@ -11,7 +11,11 @@ export default function ImageModal({ isOpen, onClose, item }) {
       onRequestClose={onClose}
     >
       <p className={css.author}>Author: {item.user.name}</p>
-      <img className={css.image} src={item.urls.regular} />
+      <img
+        className={css.image}
+        src={item.urls.regular}
+        alt={item.alt_description}
+      />
     </Modal>
   );
 }
